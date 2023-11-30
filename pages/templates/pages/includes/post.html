@@ -1,0 +1,21 @@
+
+{%load static%}
+
+
+    <li>
+    <article class="post">
+            <a href="{% url "post-detail-page" post.slug %}">
+                <img src="{% static "pages/images/"|add:post.image %}" alt="{{ post.title }}" />
+                <div class="post__content">
+                     <h3>{{post.title }} </h3>
+                    <p>Where can I get some?
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,
+                        or randomised words which don't look even slightly believable.  </p>
+                </div>
+            </a>
+
+        </article>
+    </li>
+
+
+

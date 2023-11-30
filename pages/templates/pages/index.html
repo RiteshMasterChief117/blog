@@ -5,19 +5,15 @@ My Blog
 {% endblock %}
 
 {% block css_files %}
+<link rel="stylesheet" href="{% static "pages/posts.css" %}">
 <link rel="stylesheet" href="{% static "pages/index.css" %}">
 {% endblock %}
 {% block content %}
 
-<header id="main-navigation">
-    <h1><a href="">Ritesh Blog</a></h1>
-    <nav>
-        <a href="">All Posts</a>
-    </nav>
-</header>
+
 <section id="welcome">
     <header>
-        <img src="" alt="Ritesh pic">
+        <img src="{% static "pages/images/Ritesh1.jpg" %}"  alt="Ritesh pic" />
         <h2>Ritesh Blog</h2>
     </header>
     <p>
@@ -27,28 +23,10 @@ My Blog
 
 <section id="latest-posts">
     <h2>Latest Entry</h2>
-    <ul>
-        <li><article class="post">
-            <a href="">
-                <img src="" alt="Mountain Hiking">
-                <div class="post__content">
-                     <h3>Mountain Hiking</h3>
-                    <p>This is loren ipsum comnyent</p>
-                </div>
-            </a>
+    <ul> {% for post in posts %}
+        {% include "pages/includes/post.html" %}
+        {% endfor %}
 
-        </article></li>
-           <li><article class="post">
-            <a href="">
-                <img src="" alt="Mountain Hiking">
-                </a>
-                <div class="post__content">
-                       <h3>Mountain Hiking</h3>
-                    <p>This is loren ipsum comnyent</p>
-                </div>
-
-
-        </article></li>
     </ul>
 </section>
 <section id="about">
