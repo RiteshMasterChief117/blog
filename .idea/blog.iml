@@ -13,9 +13,13 @@
     </facet>
   </component>
   <component name="NewModuleRootManager">
+<<<<<<< HEAD
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
+=======
+    <content url="file://$MODULE_DIR$" />
+>>>>>>> 862d747d2148de94a1d47dc5f40921b893dfd6d5
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
