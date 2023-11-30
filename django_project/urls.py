@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns #new
-
+from django.urls import path
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("pages.urls")),
+    #path("", include("pages.urls")),
+    path("",views.starting_page,name="starting-page"),
+    path("posts",views.posts ,name="posts-page"),
+    path("posts/<slug:slug>",views.post_detail ,name="post-detail-page"), #posts/my first post
 ]
 
 urlpatterns += staticfiles_urlpatterns() # new
